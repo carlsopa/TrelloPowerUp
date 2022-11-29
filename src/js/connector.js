@@ -18,6 +18,8 @@ window.TrelloPowerUp.initialize(
 						SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly';
 						console.log(process.env.API_KEY);
 						console.log(process.env.CLIENT_ID);
+						console.log(env.API_KEY);
+						console.log(env.CLIENT_ID);
 						
 						let tokenClient,
 						gapiInited = false,
@@ -50,6 +52,7 @@ window.TrelloPowerUp.initialize(
 								console.log('finally something good happens for me!')
 							}
 						};
+						console.log('you clicked this')
 						gapiLoaded();
 						gisLoaded();
 
@@ -68,6 +71,7 @@ window.TrelloPowerUp.initialize(
 
 													let context = t.getContext();
 								let boardId = context['board'];
+								console.log(boardId)
 													// const authClientObject = auth.getClient();
 													// const googleSheetInstance = google.sheets({version: 'v4',auth: authClientObject});
 													// const spreadsheetId = '1onix_nrV409KUSIwi_cFMs445_7NEHi9cbwAQlF8WIk';
@@ -106,6 +110,7 @@ window.TrelloPowerUp.initialize(
               labelData = JSON.parse(labelData);
               priorityData = JSON.parse(priorityData);
               cardPriorityResponseData = JSON.parse(cardPriorityResponseData);
+							console.log(labelData);
 
               listData.map((x) => {
                 listDict[x.id] = x.name;
