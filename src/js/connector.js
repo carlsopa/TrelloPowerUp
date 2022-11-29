@@ -50,6 +50,8 @@ window.TrelloPowerUp.initialize(
 								console.log('finally something good happens for me!')
 							}
 						};
+						gapiLoaded();
+						gisLoaded();
 
 
 
